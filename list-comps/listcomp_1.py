@@ -1,32 +1,32 @@
 """
-Exercise: Filtering and Transforming Student Grades
-Description: You have a list of student grades. Create a list comprehension that:
-1. Filters out grades below 60 (failing grades)
-2. Converts passing grades to letter grades using this scale:
-   - 90-100: 'A'
-   - 80-89: 'B' 
-   - 70-79: 'C'
-   - 60-69: 'D'
+Exercise: E-commerce Product Filter
+Description: You're working for an online electronics store and need to help customers find affordable products. The store has a catalog of various electronic items with their prices, and customers frequently ask for products under a certain budget.
 
-Instructions:
-Use a single list comprehension to filter and transform the grades.
-You'll need to use a conditional expression (ternary operator) within the comprehension.
+Requirements:
+Create a list of product names for all items that cost $50 or less.
 
-Data:
-grades = [45, 78, 92, 67, 55, 88, 74, 96, 61, 83, 59, 71]
-
-Expected result:
-['C', 'A', 'D', 'B', 'C', 'A', 'D', 'B', 'C']
+Learning objective: Basic list comprehension with simple filtering using conditional logic
 """
 
 # Data
-grades = [45, 78, 92, 67, 55, 88, 74, 96, 61, 83, 59, 71]
+products = [
+    {"name": "Wireless Mouse", "price": 25},
+    {"name": "Mechanical Keyboard", "price": 85},
+    {"name": "USB Cable", "price": 12},
+    {"name": "Laptop Charger", "price": 45},
+    {"name": "Bluetooth Speaker", "price": 120},
+    {"name": "Phone Case", "price": 18},
+    {"name": "Tablet Stand", "price": 35},
+    {"name": "Gaming Headset", "price": 95},
+    {"name": "Power Bank", "price": 40},
+    {"name": "Screen Cleaner", "price": 8}
+]
 
 # Your code here
 
-filtered_grades = ['A' if grade >= 90 else 'B' if grade >= 80 else 'C' if grade >= 70 else 'D' for grade in grades if grade >= 60]
-print(filtered_grades)
 
-expected_result = ['C', 'A', 'D', 'B', 'C', 'A', 'D', 'B', 'C']  # Replace with the expected result of the exercise
-
-print(expected_result==filtered_grades)
+# Uncomment to test your solution
+# expected_result = ["Wireless Mouse", "USB Cable", "Laptop Charger", "Phone Case", "Tablet Stand", "Power Bank", "Screen Cleaner"]
+# print(f"Your result: {affordable_products}")
+# print(f"Expected:    {expected_result}")
+# print(f"Match:       {affordable_products == expected_result}")
