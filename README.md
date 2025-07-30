@@ -1,19 +1,12 @@
 # Python Learning Space 🐍
 
-A demonstration of how AI prompts and chat modes can create effective learning environments. This repository showcases how custom instructions and prompts can transform AI assistants into specialized tutors for Python programming.
-
-## 🤖 AI-Powered Learning Demonstration
-
-This project serves as an **example of prompt engineering for educational purposes**. It demonstrates how custom instructions can:
-
-- Transform a general AI assistant into a specialized Python tutor
-- Create structured learning environments through clear prompts
-- Guide learners without directly providing solutions
-- Maintain educational boundaries while providing helpful guidance
+A demonstration of how AI prompts and chat modes can create effective learning environments. This repository showcases how [GitHub Copilot instructions](https://code.visualstudio.com/docs/copilot/copilot-customization), [prompts](https://code.visualstudio.com/docs/copilot/copilot-customization) and [chatmodes](https://code.visualstudio.com/docs/copilot/copilot-customization) can transform AI assistants into specialized tutors.
 
 ## 🎯 Learning Philosophy
 
 The repository structure follows a **concept-focused approach** where each Python topic is isolated in its own directory. This demonstrates how AI can help organize learning materials and maintain educational focus through well-designed prompts and chat modes.
+
+I recommend structuring the repository folowing your source of truth: book, course, or other educational material. This allows the AI to provide contextually relevant exercises and explanations.
 
 ## 🧠 AI Tutor Implementation
 
@@ -93,39 +86,11 @@ python-learning-space/
 4. **Run examples using uv:**
 
    ```bash
-   # Run the main entry point
-   uv run main.py
-   
    # Run specific topic examples
    uv run list-comps/listcomp_1.py
    ```
 
-## 📚 Available Topics
-
-### 🔄 List Comprehensions (`list-comps/`)
-
-Learn to create concise, readable list transformations using Python's list comprehension syntax.
-
-- **Focus**: Syntax, filtering, transformations, nested comprehensions
-- **Files**: `listcomp_1.py` - practical examples
-
-### 📦 Unpacking (`unpacking/`)
-
-Master Python's unpacking and destructuring capabilities for cleaner, more expressive code.
-
-- **Focus**: Tuple unpacking, starred expressions, function arguments
-- **Status**: Setup complete, examples in progress
-
-## 🎓 Learning Workflow
-
-1. **Start with the README**: Each topic directory contains a README.md explaining the concept
-2. **Study the examples**: Review the `.py` files for practical implementations
-3. **Practice exercises**: Work through the exercises described in each topic's README
-4. **Build your own**: Create additional examples to reinforce learning
-
-## 🛠️ Development Guidelines
-
-### Adding New Topics
+## Adding New Topics
 
 1. Create a new directory: `mkdir new-topic/`
 2. Add a README with concept explanation:
@@ -136,27 +101,6 @@ Master Python's unpacking and destructuring capabilities for cleaner, more expre
    In this folder you will find notes, exercises, snippets, and examples related to [topic] in Python." > new-topic/README.md
    ```
 
-3. Build examples as separate `.py` files within the topic directory
+3. Build a prompt for generating exercises or examples as needed. See `.github/prompts/` for examples.
 
-### Code Organization
-
-- **One concept per directory**: Keep topics isolated for focused learning
-- **Descriptive naming**: Use clear names that indicate the Python concept
-- **Progressive complexity**: Start simple, build complexity within each topic
-- **Educational comments**: Include explanations for learning purposes
-
-## 🔧 Running Examples
-
-### Using uv (Recommended)
-
-```bash
-# Run the main entry point
-uv run main.py
-
-# Run specific topic examples
-uv run list-comps/listcomp_1.py
-
-# Run with activated virtual environment
-source .venv/bin/activate
-uv run python listcomp_1.py  # from within list-comps/ directory
-```
+Experiment with prompts, chat modes, and configurations to enhance your learning experience.
